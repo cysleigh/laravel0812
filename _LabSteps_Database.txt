@@ -1,4 +1,4 @@
-Lab: Laravel 資料庫程式設計
+﻿Lab: Laravel 資料庫程式設計
 
 
 1.  開發環境與預習知識
@@ -98,6 +98,11 @@ DB::table('employees')->get();
 DB::table('employees')->find(1)
 DB::table('employees')->where('lastName', 'test')->first()
 DB::table('employees')->where('lastName', 'test')->delete()
+DB::table('employees')->where('id','>', '1')->get()
+DB::table('employees')->where('id','>', '1')->orderby('id','desc') ->get();
+DB::table('employees')->where('id','>', '1')->first();
+DB::table('employees')->where('id','>', '1')->skip(1) -> get();
+DB::table('employees')->select('lastname','id') ->where('id','>','0') ->first();
 
 App\Employee::all();
 App\Employee::find(1);
